@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MinEnemyMove : AttackBase {
-
+public class MinEnemyMove : MinEnemyAttackBase
+{
     //目的位置
     public GameObject _targetObj;
     //ナビメッシュ
@@ -23,6 +23,7 @@ public class MinEnemyMove : AttackBase {
         {
             //目的地をセット
             _navMeshAgent.SetDestination(_targetObj.transform.position);
+            //追尾時の更新
             _navMeshAgent.updatePosition = true;
             _navMeshAgent.updateRotation = true;
         }
@@ -35,9 +36,8 @@ public class MinEnemyMove : AttackBase {
     /// <returns></returns>
     public void Stop()
     {
-        //Debug.Log("STOP");
+        //追尾の停止
         _navMeshAgent.updatePosition = false;
-        //_navMeshAgent.updateRotation = false;
     }
 
 }

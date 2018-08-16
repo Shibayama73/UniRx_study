@@ -4,7 +4,8 @@ using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
 
-public class PlayerTargetMove : MoveBase {
+public class PlayerTargetMove : PlayerMoveBase
+{
 
     public float _speed = 1.0f; // 移動速度 m/s
 
