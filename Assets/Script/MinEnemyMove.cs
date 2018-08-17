@@ -18,6 +18,24 @@ public class MinEnemyMove : MinEnemyAttackBase
 	
 	// Update is called once per frame
 	void Update () {
+        ////NavMeshAgentが準備できているなら
+        //if (_navMeshAgent.pathStatus != NavMeshPathStatus.PathInvalid)
+        //{
+        //    //目的地をセット
+        //    _navMeshAgent.SetDestination(_targetObj.transform.position);
+        //    //追尾時の更新
+        //    _navMeshAgent.updatePosition = true;
+        //    _navMeshAgent.updateRotation = true;
+        //}
+
+    }
+
+    /// <summary>
+    /// 通常移動する
+    /// </summary>
+    /// <returns></returns>
+    public void NormalMove()
+    {
         //NavMeshAgentが準備できているなら
         if (_navMeshAgent.pathStatus != NavMeshPathStatus.PathInvalid)
         {
@@ -27,8 +45,8 @@ public class MinEnemyMove : MinEnemyAttackBase
             _navMeshAgent.updatePosition = true;
             _navMeshAgent.updateRotation = true;
         }
-
     }
+
 
     /// <summary>
     /// 停止する

@@ -246,6 +246,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\MinEnemy.cs" />
     <Compile Include="Assets\Script\MinEnemyAttack.cs" />
     <Compile Include="Assets\Script\MinEnemyAttackBase.cs" />
     <Compile Include="Assets\Script\MinEnemyMove.cs" />
